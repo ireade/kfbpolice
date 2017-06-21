@@ -68,7 +68,7 @@ stream.on('tweet', (tweet) => {
 
         const randomResponse = responses[Math.floor(Math.random() * responses.length)];   
         const reply = {
-            status: `@${tweet.user.screen_name} ${randomResponse.text}`,
+            status: `@${asker} @${askee} ${randomResponse.text}`,
             in_reply_to_status_id: tweet.id_str,
             media_ids: [randomResponse.image_id]
         };
