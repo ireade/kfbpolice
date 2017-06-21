@@ -1,7 +1,7 @@
 module.exports = [ 
     '@ireaderinokun',
     '@timigod',
-    '@twisted_myk'
+    '@twisted_myk',
     '@robertjgabriel',
     '@fathermerry',
     '@seyitaylor',
