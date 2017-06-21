@@ -3,5 +3,6 @@ module.exports = [
     '@timigod',
     '@robertjgabriel',
     '@fathermerry',
-    '@seyitaylor'
+    '@seyitaylor',
+    '@remadelive'
 ];
