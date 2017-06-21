@@ -5,8 +5,8 @@ module.exports = [
     '@robertjgabriel',
     '@fathermerry',
     '@seyitaylor',
+    '@ienoobong',
     '@theLiveware',
     '@efemoney_',
     '@udezekene',
-    '@remadelive'
 ];
