@@ -47,6 +47,7 @@ const stream = T.stream('statuses/filter', { track: usernames.join(','), languag
 
 stream.on('tweet', (tweet) => {
 
+    if ( tweet.user.screen_name == 'kfb_police' ) return;
     if ( tweet.retweeted_status ) return;
 
     const tweetLC = tweet.text.toLowerCase();
