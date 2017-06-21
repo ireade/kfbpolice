@@ -1,5 +1,5 @@
 module.exports = [ 
     '@ireaderinokun',
-    '@timigod'
+    '@timigod',
     '@robertjgabriel'
 ];
