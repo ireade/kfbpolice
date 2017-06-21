@@ -2,5 +2,6 @@ module.exports = [
     '@ireaderinokun',
     '@timigod',
     '@fathermerry',
-    '@seyitaylor'
+    '@seyitaylor',
+    '@ienoobong'
 ];
