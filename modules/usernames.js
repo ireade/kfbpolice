@@ -1,7 +1,10 @@
 module.exports = [ 
     '@ireaderinokun',
     '@timigod',
+    '@robertjgabriel',
     '@fathermerry',
     '@seyitaylor',
-    '@efemoney_'
+    '@efemoney_',
+    '@udezekene',
+    '@remadelive'
 ];
