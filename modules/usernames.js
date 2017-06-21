@@ -4,6 +4,7 @@ module.exports = [
     '@robertjgabriel',
     '@fathermerry',
     '@seyitaylor',
+    '@efemoney_',
     '@udezekene',
     '@remadelive'
 ];
