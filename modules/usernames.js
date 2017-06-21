@@ -1,6 +1,8 @@
-module.exports = [ 
+module.exports = 
+[
     '@ireaderinokun',
     '@timigod',
+    '@matscode', //:-D
     '@twisted_myk',
     '@robertjgabriel',
     '@fathermerry',
