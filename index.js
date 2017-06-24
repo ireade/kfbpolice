@@ -1,38 +1,19 @@
 const express = require('express');
-const app = express();
 const path = require('path');
+const fs = require("fs");
+
+const responses_helper = require("./modules/responses_helper");
+const T = require('./modules/T');
+const usernames = require('./modules/usernames');
+
+const app = express();
+
 app.set('port', (process.env.PORT || 5000));
 app.get('/', function (request, response) {
     response.sendFile(path.join(__dirname + '/views/index.html'));
 }).listen(app.get('port'), function () {
     console.log('App is running, server is listening on port ', app.get('port'));
 });
-
-const fs = require("fs");
-const T = require('./modules/T');
-const usernames = require('./modules/usernames');
-
-
-/* ******************
-
- Responses
-
- ******************* */
-
-const responses = [
-    {
-        text: 'kInDlY fOlLoW bAcK pLs',
-        image: 'images/spongebob.jpg'
-    },
-    {
-        text: 'But did they ask you to follow them?',
-        image: 'images/ooo.png'
-    },
-    {
-        text: 'But did they ask you to follow them?',
-        image: 'images/annoyed_child.png'
-    }
-];
 
 
 /* ******************
@@ -66,7 +47,7 @@ stream.on('tweet', (tweet) => {
    
         console.log("Tweet Applies: ", tweetLC);
 
-        const randomResponse = responses[Math.floor(Math.random() * responses.length)]; 
+        const randomResponse = responses_helper.get_response();
 
         const b64content = fs.readFileSync(randomResponse.image, { encoding: 'base64' })
         T.post('media/upload', { media_data: b64content }, function (err, data, response) {
