@@ -9,6 +9,7 @@ module.exports = [
     '@theLiveware',
     '@efemoney_',
     '@udezekene',
-    '@frontenderic'
+    '@victorbolum',
+    '@frontenderic',
     '@perfectmak'
 ];
