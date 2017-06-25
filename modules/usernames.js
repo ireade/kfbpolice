@@ -2,7 +2,7 @@ module.exports =
 [
     '@ireaderinokun',
     '@timigod',
-    '@matscode', //:-D
+    '@matscode',
     '@twisted_myk',
     '@robertjgabriel',
     '@fathermerry',
