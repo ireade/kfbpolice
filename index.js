@@ -8,8 +8,8 @@ app.get('/', function (request, response) {
     console.log('App is running, server is listening on port ', app.get('port'));
 });
 
+const fs = require("fs");
 const T = require('./modules/T');
-
 const usernames = require('./modules/usernames');
 
 
@@ -22,15 +22,15 @@ const usernames = require('./modules/usernames');
 const responses = [
     {
         text: 'kInDlY fOlLoW bAcK pLs',
-        image_id: '877169780758908928'
+        image: 'images/spongebob.jpg'
     },
     {
         text: 'But did they ask you to follow them?',
-        image_id: '877172696781643777'
+        image: 'images/ooo.png'
     },
     {
         text: 'But did they ask you to follow them?',
-        image_id: '877172812527665152'
+        image: 'images/annoyed_child.png'
     }
 ];
 
@@ -56,7 +56,7 @@ stream.on('tweet', (tweet) => {
 
     if ( asker == askee ) return;
 
-    console.log("Tweet Seen: ", tweetLC);
+    console.log("Tweet Seen");
 
     if ( tweetLC.indexOf('kfb') > -1 | 
          tweetLC.indexOf('ffb') > -1 |
@@ -66,20 +66,29 @@ stream.on('tweet', (tweet) => {
    
         console.log("Tweet Applies: ", tweetLC);
 
-        const randomResponse = responses[Math.floor(Math.random() * responses.length)];   
-        const reply = {
-            status: `@${asker} @${askee} ${randomResponse.text}`,
-            in_reply_to_status_id: tweet.id_str,
-            media_ids: [randomResponse.image_id]
-        };
+        const randomResponse = responses[Math.floor(Math.random() * responses.length)]; 
 
-        T.post('statuses/update', reply, function(err, data, response) {
-            if ( err ) {
-                console.log(err);
-            } else {
-                console.log("Reply Sent: ", data.text);
-            } 
+        const b64content = fs.readFileSync(randomResponse.image, { encoding: 'base64' })
+        T.post('media/upload', { media_data: b64content }, function (err, data, response) {
+
+            const reply = {
+                status: `@${asker} @${askee} ${randomResponse.text}`,
+                in_reply_to_status_id: tweet.id_str,
+                media_ids: [data.media_id_string]
+            };
+
+            console.log("Media Uploaded: ", data.media_id_string);
+
+            T.post('statuses/update', reply, function(err, data, response) {
+                if ( err ) {
+                    console.log(err);
+                } else {
+                    console.log("Reply Sent: ", data.text);
+                } 
+            });
         });
+
+
 
     }
 });
