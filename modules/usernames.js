@@ -9,5 +9,9 @@ module.exports = [
     '@theLiveware',
     '@efemoney_',
     '@udezekene',
-    '@Ope__O'
+    '@Ope__O',
+    '@emma_odia',
+    '@victorbolum',
+    '@frontenderic',
+    '@perfectmak'
 ];
