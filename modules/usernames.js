@@ -10,4 +10,5 @@ module.exports = [
     '@efemoney_',
     '@udezekene',
     '@frontenderic'
+    '@perfectmak'
 ];
