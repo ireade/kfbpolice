@@ -10,4 +10,10 @@ module.exports = [
     '@efemoney_',
     '@udezekene',
     '@abahnj',
+    '@ribads',
+    '@Ope__O',
+    '@emma_odia',
+    '@victorbolum',
+    '@frontenderic',
+    '@perfectmak'
 ];
