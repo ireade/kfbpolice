@@ -16,4 +16,5 @@ module.exports = [
     '@victorbolum',
     '@frontenderic',
     '@perfectmak'
+    '@_Folz'
 ];
