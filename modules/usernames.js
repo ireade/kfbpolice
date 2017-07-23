@@ -15,5 +15,6 @@ module.exports = [
     '@emma_odia',
     '@victorbolum',
     '@frontenderic',
-    '@perfectmak'
+    '@perfectmak',
+    '@okanlawonema'
 ];
