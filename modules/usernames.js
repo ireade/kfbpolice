@@ -16,5 +16,6 @@ module.exports = [
     '@victorbolum',
     '@frontenderic',
     '@perfectmak',
-    '@ajafik'
+    '@ajafik',
+    '@iamwebwiz'
 ];
