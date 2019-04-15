@@ -17,5 +17,6 @@ module.exports = [
     '@frontenderic',
     '@perfectmak',
     '@ajafik',
-    '@iamwebwiz'
+    '@iamwebwiz',
+    '@erons_xo'
 ];
