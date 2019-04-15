@@ -18,4 +18,5 @@ module.exports = [
     '@perfectmak',
     '@ajafik',
     '@iamwebwiz'
+    '@erons_xo'
 ];
